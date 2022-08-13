@@ -18,10 +18,11 @@ body{
     font-family: var(--main);
     font-weight: 400;
     font-size: 15px;
-    width: 1440px;
-    margin: 0 auto;
+    display: grid;
+    place-items: center;
 }
 main{
+    max-width: 1440px;
     display: grid;
     place-items: center;
     height: 100vh;
@@ -29,16 +30,21 @@ main{
 .container{
     display: flex;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 9px;
+    overflow: hidden;
 }
 .info{
     background-color: var(--Dark-desaturated-blue);
-    padding: 2em;
-    width: 50%;
+    width: 540px;
+}
+.content{
+    padding: 4em;
+}
+.text{
+    margin: 3em 0 5em 0;
 }
 .title{
     font-family: var(--primary);
-
 }
 .title span{
     color: var(--Soft-violet);
