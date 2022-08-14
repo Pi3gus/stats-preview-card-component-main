@@ -2,7 +2,7 @@
 :root{
     --Very-dark-blue: hsl(233, 47%, 7%);
     --Dark-desaturated-blue: hsl(244, 38%, 16%);
-    --Soft-violet: hsl(277, 64%, 61%);
+    --Soft-violet: hsla(277, 64%, 61%, 0.5);
     --white: hsl(0, 0%, 100%);
     --main: 'Inter', sans-serif;
     --primary: 'Lexend Deca', sans-serif;
@@ -28,8 +28,8 @@ main{
     height: 100vh;
 }
 .container{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border-radius: 9px;
     overflow: hidden;
 }
@@ -38,10 +38,12 @@ main{
     width: 540px;
 }
 .content{
-    padding: 4em;
+    padding: 5.1em;
 }
 .text{
-    margin: 3em 0 5em 0;
+    margin: 2em 0 4em 0;
+    line-height: 1.8;
+    opacity: 0.75;
 }
 .title{
     font-family: var(--primary);
@@ -51,14 +53,29 @@ main{
 }
 .numbers{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-.tile h3{
+.tile h2{
     font-weight: 700;
 }
 .tile p{
     font-weight: 400;
+    opacity: 0.75;
+}
+.img img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .img{
-    display: block;
+    position: relative;
+}
+.img::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--Soft-violet);
 }
